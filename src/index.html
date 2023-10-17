@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,15 +14,29 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
+      <div class="row text-center d-flex justify-content-center" id="rowCarta">
+        <div class="col-3 bg-dark rounded-3 position-relative" id="carta">
+          <div
+            class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+            id="symbol"
+          ></div>
+          <p
+            class="position-absolute top-50 start-50 translate-middle fs-1 text-light"
+            id="number"
+          ></p>
+          <div
+            class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+            id="symbol2"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="container fluid text-center">
       <div class="fixed-bottom p-4">
         Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+        <a href="https://www.instagram.com/agus_ruiz95" target="_blank"
+          >Agustín Ruiz</a
+        >
       </div>
     </div>
   </body>

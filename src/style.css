@@ -1,1 +1,18 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#rowCarta {
+  height: 500px;
+  margin-top: 150px;
+}
+
+#carta {
+  width: 350px;
+}
+
+/*#number {
+  font-size: 150px;
+}
+
+#symbol {
+  font-size: 150px;
+}*/
