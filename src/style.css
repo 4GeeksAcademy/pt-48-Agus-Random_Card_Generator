@@ -1,15 +1,26 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-#rowCarta {
-  height: 500px;
-  margin-top: 150px;
+body {
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  height: 75vh;
 }
 
-#carta {
+#rowCarta {
+  margin-top: 75px;
+}
+
+/*#carta {
+  height: 500px;
   width: 350px;
 }
 
-/*#number {
+#number {
   font-size: 150px;
 }
 

@@ -13,6 +13,26 @@ window.onload = function() {
   let randomNumber = numbers[randomNumberIndex];
 
   document.querySelector("#number").innerHTML = randomNumber;
-  document.querySelector("#symbol").innerHTML = randomSymbol;
-  document.querySelector("#symbol2").innerHTML = randomSymbol;
+  function symbolGenerator() {
+    if (randomSymbolIndex <= 1) {
+      document.querySelector("#symbol").innerHTML = `<div
+      class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+      id="symbol"
+    >${randomSymbol}</div>`;
+      document.querySelector("#symbol2").innerHTML = `<div
+      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+      id="symbol2"
+    >${randomSymbol}</div>`;
+    } else {
+      document.querySelector("#symbol").innerHTML = `<div
+      class="position-absolute top-0 start-0 ps-3 fs-1 text-dark"
+      id="symbol"
+    >${randomSymbol}</div>`;
+      document.querySelector("#symbol2").innerHTML = `<div
+      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-dark"
+      id="symbol2"
+    >${randomSymbol}</div>`;
+    }
+  }
+  symbolGenerator();
 };

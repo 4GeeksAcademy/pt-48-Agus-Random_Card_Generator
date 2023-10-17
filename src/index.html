@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Card Generator</title>
+    <script type="module" src="app.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -13,15 +14,98 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center" id="ieuhgrb">
+      <button type="button" class="btn btn-dark mt-5">
+        <a class="text-light" href="/index.html" style="text-decoration: none;"
+          >Resize</a
+        >
+      </button>
+      <button type="button" class="btn btn-dark mt-5" onclick="cardGenerator()">
+        Refresh
+      </button>
+      <div class="pt-5">Customize your card:</div>
+      <input type="text" placeholder="height in pixels" id="height" />
+      <input type="text" placeholder="width in pixels" id="width" />
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="cardModification()"
+      >
+        Submit
+      </button>
+      <script>
+        function cardGenerator() {
+          let symbols = ["❤", "♦", "♠", "♣"];
+          let numbers = new Array(12)
+            .fill(1)
+            .map((accumulator, index) => index + 1);
+
+          let randomSymbolIndex = Math.floor(Math.random() * symbols.length);
+          let randomNumberIndex = Math.floor(Math.random() * numbers.length);
+
+          let randomSymbol = symbols[randomSymbolIndex];
+          let randomNumber = numbers[randomNumberIndex];
+
+          document.querySelector("#number").innerHTML = randomNumber;
+          function symbolGenerator() {
+            if (randomSymbolIndex <= 1) {
+              document.querySelector("#symbol").innerHTML = `<div
+              class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+              id="symbol"
+              >${randomSymbol}</div>`;
+              document.querySelector("#symbol2").innerHTML = `<div
+              class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+              id="symbol2"
+              >${randomSymbol}</div>`;
+            } else {
+              document.querySelector("#symbol").innerHTML = `<div
+              class="position-absolute top-0 start-0 ps-3 fs-1 text-dark"
+              id="symbol"
+              >${randomSymbol}</div>`;
+              document.querySelector("#symbol2").innerHTML = `<div
+              class="position-absolute bottom-0 end-0 pe-3 fs-1 text-dark"
+              id="symbol2"
+              >${randomSymbol}</div>`;
+            }
+          }
+          symbolGenerator();
+        }
+      </script>
+      <script>
+        function cardModification() {
+          const height = document.querySelector("#height").value;
+          const width = document.querySelector("#width").value;
+          document.querySelector("#rowCarta").innerHTML = `<div
+          class="col-3 bg-light border border-dark rounded-3 position-relative"
+          id="carta"
+          style="height: ${height}px; width: ${width}px;"
+          ><div
+            class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+            id="symbol"
+          ></div>
+          <p
+            class="position-absolute top-50 start-50 translate-middle fs-1 text-dark"
+            id="number"
+          ></p>
+          <div
+            class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+            id="symbol2"
+          ></div></div>`;
+          cardGenerator();
+        }
+      </script>
       <div class="row text-center d-flex justify-content-center" id="rowCarta">
-        <div class="col-3 bg-dark rounded-3 position-relative" id="carta">
+        <div
+          class="col-3 bg-light border border-dark rounded-3 position-relative"
+          id="carta"
+          style="height: 500px; width: 350px;"
+        >
           <div
             class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
             id="symbol"
           ></div>
           <p
-            class="position-absolute top-50 start-50 translate-middle fs-1 text-light"
+            class="position-absolute top-50 start-50 translate-middle fs-1 text-dark"
             id="number"
           ></p>
           <div
