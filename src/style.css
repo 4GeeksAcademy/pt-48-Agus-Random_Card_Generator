@@ -20,10 +20,14 @@ body {
   width: 350px;
 }
 
-/*#number {
-  font-size: 150px;
+#number {
+  font-size: 150px !important;
 }
 
 #symbol {
-  font-size: 150px;
-}*/
+  font-size: 90px !important;
+}
+
+#symbol2 {
+  font-size: 90px !important;
+}
