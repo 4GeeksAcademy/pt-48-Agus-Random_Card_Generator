@@ -3,7 +3,7 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = function() {
-  let symbols = ["❤", "♦", "♠", "♣"];
+  let symbols = ["♥", "♦", "♠", "♣"];
   let numbers = new Array(12).fill(1).map((accumulator, index) => index + 1);
 
   let randomSymbolIndex = Math.floor(Math.random() * symbols.length);
@@ -16,20 +16,20 @@ window.onload = function() {
   function symbolGenerator() {
     if (randomSymbolIndex <= 1) {
       document.querySelector("#symbol").innerHTML = `<div
-      class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+      class="position-absolute top-0 start-0 ps-3 pt-1 fs-1 text-danger"
       id="symbol"
     >${randomSymbol}</div>`;
       document.querySelector("#symbol2").innerHTML = `<div
-      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+      class="position-absolute bottom-0 end-0 pe-3 pb-2 fs-1 text-danger"
       id="symbol2"
     >${randomSymbol}</div>`;
     } else {
       document.querySelector("#symbol").innerHTML = `<div
-      class="position-absolute top-0 start-0 ps-3 fs-1 text-dark"
+      class="position-absolute top-0 start-0 ps-3 pt-1 fs-1 text-dark"
       id="symbol"
     >${randomSymbol}</div>`;
       document.querySelector("#symbol2").innerHTML = `<div
-      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-dark"
+      class="position-absolute bottom-0 end-0 pe-3 pb-2 fs-1 text-dark"
       id="symbol2"
     >${randomSymbol}</div>`;
     }
@@ -38,7 +38,7 @@ window.onload = function() {
 };
 
 function cardGenerator() {
-  let symbols = ["❤", "♦", "♠", "♣"];
+  let symbols = ["♥", "♦", "♠", "♣"];
   let numbers = new Array(12).fill(1).map((accumulator, index) => index + 1);
 
   let randomSymbolIndex = Math.floor(Math.random() * symbols.length);
@@ -51,20 +51,20 @@ function cardGenerator() {
   function symbolGenerator() {
     if (randomSymbolIndex <= 1) {
       document.querySelector("#symbol").innerHTML = `<div
-      class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+      class="position-absolute top-0 start-0 ps-3 pt-1 fs-1 text-danger"
       id="symbol"
       >${randomSymbol}</div>`;
       document.querySelector("#symbol2").innerHTML = `<div
-      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+      class="position-absolute bottom-0 end-0 pe-3 pb-2 fs-1 text-danger"
       id="symbol2"
       >${randomSymbol}</div>`;
     } else {
       document.querySelector("#symbol").innerHTML = `<div
-      class="position-absolute top-0 start-0 ps-3 fs-1 text-dark"
+      class="position-absolute top-0 start-0 ps-3 pt-1 fs-1 text-dark"
       id="symbol"
       >${randomSymbol}</div>`;
       document.querySelector("#symbol2").innerHTML = `<div
-      class="position-absolute bottom-0 end-0 pe-3 fs-1 text-dark"
+      class="position-absolute bottom-0 end-0 pe-3 pb-2 fs-1 text-dark"
       id="symbol2"
       >${randomSymbol}</div>`;
     }
@@ -82,7 +82,7 @@ function cardModification() {
   id="carta"
   style="height: ${height}px; width: ${width}px;"
   ><div
-    class="position-absolute top-0 start-0 ps-3 fs-1 text-danger"
+    class="position-absolute top-0 start-0 ps-3 pt-2 fs-1 text-danger"
     id="symbol"
   ></div>
   <p
@@ -90,7 +90,7 @@ function cardModification() {
     id="number"
   ></p>
   <div
-    class="position-absolute bottom-0 end-0 pe-3 fs-1 text-danger"
+    class="position-absolute bottom-0 end-0 pe-3 pb-2 fs-1 text-danger"
     id="symbol2"
   ></div></div>`;
   cardGenerator();
